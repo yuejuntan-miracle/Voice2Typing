@@ -1,0 +1,27 @@
+# Runtime dependencies.
+# Install with:  python -m pip install -r requirements.txt
+#
+# Minimum versions are used (instead of exact pins) so the same file works
+# across Python 3.10, 3.11, 3.12, 3.13+ on Windows, macOS, and Linux.
+#
+# No ML runtime is installed: speech runs on Gemini 3.5 Transcribe Live and the
+# English fixer on Gemma 4, both over the Gemini API.
+numpy>=1.26
+sounddevice>=0.5.0
+websocket-client>=1.8.0
+soundfile>=0.12.1
+pillow>=10.0.0
+pynput>=1.7.7
+pyperclip>=1.8.2
+pystray>=0.19.5
+
+# macOS: PyObjC gives the transcript panel a real non-activating NSWindow.
+pyobjc-framework-Cocoa>=10.0; sys_platform == "darwin"
+# Linux X11: pynput's keyboard/mouse backend needs python-xlib.
+python-xlib>=0.33; sys_platform == "linux"
+
+# System packages that pip cannot install:
+#   Linux   : libportaudio2 (sounddevice), python3-tk (panel),
+#             xclip or xsel (X11 clipboard) or wl-clipboard (Wayland)
+#   macOS   : PortAudio is bundled by sounddevice; tkinter ships with python.org
+#             builds. Grant Accessibility, Input Monitoring and Microphone.

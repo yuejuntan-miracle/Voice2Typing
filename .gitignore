@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.venv-t5/
+venv/
+
+# Runtime artifacts
+dictate.log
+dictate.log.*
+rewrite_worker.log
+last_recording.wav
+test_mic.wav
+config.json
+icon_preview.png
+tray_states.png
+taskbar_states.png
+panel_*.png
+live_*.png
+clip_*.png
+landing*.png
+landing_shot.png
+hero_zoom.png
+traffic_zoom.png
+footer_check.png
+mobile_top.png
+taskbar_find.png
+_speech.wav
+_*.py
+
+# Editors / OS
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini

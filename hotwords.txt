@@ -1,0 +1,42 @@
+# Extra words the speech model should spell exactly as written.
+# One term per line. Everything after '#' is a comment. Re-read automatically.
+#
+# Good candidates: product names, people, file names, acronyms, jargon.
+#
+# Singapore / Malaysia English: local food, places, acronyms and the discourse
+# particles that are part of the sentence here, so the model keeps them
+# instead of swallowing them as noise.
+Singapore
+Malaysia
+Singlish
+Manglish
+lah
+leh
+lor
+sia
+shiok
+sian
+tapao
+makan
+mamak
+kopitiam
+hawker centre
+void deck
+HDB
+MRT
+CPF
+GST
+nasi lemak
+teh tarik
+roti prata
+kaya toast
+condo
+Jalan
+Bukit
+Johor Bahru
+Kuala Lumpur
+Penang
+OpenCode
+Qwen3-ASR
+PyTorch
+Hugging Face

@@ -1,0 +1,54 @@
+name: Test
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install system packages
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3 python3-venv python3-tk libportaudio2 xclip gcc python3-dev linux-libc-dev
+      - name: Run setup and checks
+        run: |
+          chmod +x linux/setup.sh
+          ./linux/setup.sh
+          .venv/bin/python -m py_compile *.py
+          .venv/bin/python dictate.py --help
+          .venv/bin/python dictate.py --doctor
+
+  macos:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run setup and checks
+        run: |
+          chmod +x macos/setup.sh
+          ./macos/setup.sh
+          .venv/bin/python -m py_compile *.py
+          .venv/bin/python dictate.py --help
+          .venv/bin/python dictate.py --doctor
+
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies and run checks
+        run: |
+          python -m venv .venv
+          .venv\Scripts\python.exe -m pip install --upgrade pip
+          .venv\Scripts\python.exe -m pip install -r requirements.txt
+          .venv\Scripts\python.exe -m py_compile dictate.py gemini_stt.py rewrite.py context_awareness.py trigger.py shortcuts.py platform_support.py overlay.py
+          .venv\Scripts\python.exe dictate.py --help
+          .venv\Scripts\python.exe dictate.py --doctor

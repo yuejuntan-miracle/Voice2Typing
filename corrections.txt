@@ -1,0 +1,12 @@
+# Fixed corrections for words the speech model keeps mishearing.
+# One per line:   what it writes => what you meant
+# Case-insensitive, whole words only. Re-read automatically, no restart.
+# Applied before the English fixer, so they always win.
+#
+# Prefer phrases over single words: "bass => base" would change every "bass".
+data bass => database
+pass word => password
+GP you => GPU
+CP you => CPU
+in voice => invoice
+get hub => GitHub

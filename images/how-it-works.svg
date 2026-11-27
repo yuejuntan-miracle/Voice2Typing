@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="150" viewBox="0 0 760 150" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="760" height="150" fill="#0f1115"/>
+  <g>
+    <rect x="20" y="45" width="150" height="60" rx="10" fill="#1b1f27" stroke="#2b3140"/>
+    <text x="95" y="72" fill="#e6e6e6" font-size="15" text-anchor="middle">Hold the</text>
+    <text x="95" y="92" fill="#e6e6e6" font-size="15" text-anchor="middle">shortcut</text>
+
+    <rect x="205" y="45" width="150" height="60" rx="10" fill="#1b1f27" stroke="#2b3140"/>
+    <text x="280" y="80" fill="#e6e6e6" font-size="15" text-anchor="middle">Speak</text>
+
+    <rect x="390" y="45" width="150" height="60" rx="10" fill="#1b1f27" stroke="#2b3140"/>
+    <text x="465" y="80" fill="#e6e6e6" font-size="15" text-anchor="middle">Release</text>
+
+    <rect x="575" y="45" width="165" height="60" rx="10" fill="#12351f" stroke="#37d67a"/>
+    <text x="657" y="72" fill="#eafff2" font-size="15" text-anchor="middle">Clean text</text>
+    <text x="657" y="92" fill="#eafff2" font-size="15" text-anchor="middle">at the cursor</text>
+  </g>
+  <g stroke="#5b6472" stroke-width="2" fill="none">
+    <line x1="170" y1="75" x2="198" y2="75"/><polyline points="190,68 198,75 190,82"/>
+    <line x1="355" y1="75" x2="383" y2="75"/><polyline points="375,68 383,75 375,82"/>
+    <line x1="540" y1="75" x2="568" y2="75"/><polyline points="560,68 568,75 560,82"/>
+  </g>
+  <text x="380" y="132" fill="#8b93a1" font-size="13" text-anchor="middle">No local models or GPU. Audio is transcribed by Gemini in the cloud.</text>
+</svg>
